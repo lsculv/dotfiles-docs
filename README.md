@@ -3,7 +3,7 @@
 This _must_ be a completely separate repo as the `dotfiles` repo needs to match
 _exactly_ the structure of the files that live in `$HOME`. If this README or
 other docs were added there, it would clutter your home directory whenever you
-used it and complain if you deleted them and tried to add some more files.
+used it, and complain if you deleted them and tried to add some more files.
 A separate docs repo is the best solution for simplicity of installation and use.
 
 ## Setup
