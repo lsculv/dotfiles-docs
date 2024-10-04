@@ -2,9 +2,9 @@
 
 This _must_ be a completely separate repo as the `dotfiles` repo needs to match
 _exactly_ the structure of the files that live in `$HOME`. If this README or
-other docs were added there, it would clutter you home directory whenever you
+other docs were added there, it would clutter your home directory whenever you
 used it and complain if you deleted them and tried to add some more files.
-A separate docs repo is the best thing for simplicity of installation and use.
+A separate docs repo is the best solution for simplicity of installation and use.
 
 ## Setup
 
@@ -18,6 +18,8 @@ git clone --bare https://github.com/lsculv/dotfiles $HOME/.dotfiles
 config checkout || \
     config checkout 2>&1 | grep -E "^\s+" | awk '{print $1}' | \
     xargs -I{} /bin/sh -c 'mkdir -p config-backup/"$(dirname {})"; mv {} config-backup/{}'
+config checkout
+config config --local status.showUntrackedFiles no
 ```
 
 After this setup it is probably a good idea to reboot, or at least restart any
